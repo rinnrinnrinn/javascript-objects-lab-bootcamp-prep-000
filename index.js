@@ -1,31 +1,23 @@
-var recipes = {
-  prop: "1",
-  prop3: "3"
-};
+var recipes = {};
 
-function updateObjectWithKeyAndValue(obj,key,value) {
-   return Object.assign({}, recipes, { ['prop2']: "2" })
-   return recipes
+function updateObjectWithKeyAndValue(object, key, value) {
+  return Object.assign({}, object, {[key]: value});
 }
 
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  obj[key] = value;
-  return obj;
+  object[key] = value;
+  return object;
 }
-
-const recipe = { eggs: 3 }
- 
-destructivelyUpdateObjectWithKeyAndValue(recipes, 'prop2', '2')
-
 
 function deleteFromObjectByKey(object, key) {
-  var recipes2 = Object.assign({}, recipes2);
-  delete recipes2.prop;
-  return recipes2;
+  var newObj = Object.assign({}, object);
+  delete newObj[key];
+  return newObj;
 }
 
-function destructivelyDeleteFromObjectByKey(object, key)
-{
-  delete recipes.prop;
- return recipes;
+
+function destructivelyDeleteFromObjectByKey(object, key) {
+  delete object[key];
+  return object;
 }
+
