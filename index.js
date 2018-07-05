@@ -9,9 +9,13 @@ function updateObjectWithKeyAndValue(obj,key,value) {
 }
 
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  recipes[prop2] = "2";
-  return recipes;
+  obj[key] = value;
+  return obj;
 }
+
+const recipe = { eggs: 3 }
+ 
+destructivelyUpdateObjectWithKeyAndValue(recipes, 'prop2', '2')
 
 
 function deleteFromObjectByKey(object, key) {
