@@ -9,7 +9,7 @@ function updateObjectWithKeyAndValue(obj,key,value) {
 }
 
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  recipes["prop2"] = "2";
+  recipes."prop2" = "2";
   return recipes;
 }
 
